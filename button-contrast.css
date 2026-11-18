@@ -1,0 +1,10 @@
+/* Explicit default avoids white text on the browser's light button background. */
+button{background-color:#1c354b}
+.brand-icon{color:#10291e}
+/* Bright action buttons retain their bright surface when hovered/selected. */
+.primary,.primary:hover:not(:disabled),.ut-surface button.primary:hover:not(:disabled),.account-shell button.primary:hover:not(:disabled),.account-shell button.selected:hover:not(:disabled){background:#b6efd3;color:#10291e;border-color:#b6efd3}
+.ut-tabs button.selected:hover:not(:disabled){background:#b6efd3;color:#10291e}
+.club-buttons button:not(.primary){color:#f2f7fc}
+.ut-surface button:disabled,#party-lobby button:disabled{opacity:.7}
+button:focus-visible{outline:3px solid #e5ff9a;outline-offset:3px}
+button:disabled{cursor:not-allowed}

@@ -1,0 +1,39 @@
+body:has(.game-wrap.in-match):not(.booting){overflow:hidden}
+body:not(.booting) #arena:has(.game-wrap.in-match){position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;margin:0;padding:0;border:0;border-radius:0;z-index:100;background:#10251f;overflow:hidden}
+body:not(.booting) #arena .game-wrap.in-match{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;aspect-ratio:auto;margin:0}
+.game-wrap.in-match>#game{width:100%;height:100%;object-fit:fill;touch-action:none}
+body:not(.booting) #arena:has(.game-wrap.in-match)>.arena-top{position:absolute;right:8px;top:6px;z-index:15;min-height:0;padding:4px;border:0;background:transparent;pointer-events:none}
+body:not(.booting) #arena:has(.game-wrap.in-match)>.arena-top button{pointer-events:auto}
+body:not(.booting) #arena:has(.game-wrap.in-match)>.arena-top #venue-label,body:not(.booting) #arena:has(.game-wrap.in-match)>.arena-top #match-label,body:not(.booting) #arena:has(.game-wrap.in-match)>.arena-bottom{display:none}
+body:not(.booting) #arena:has(.game-wrap.in-match)>#bench-bar,body:not(.booting) #arena:has(.game-wrap.in-match)>#training-tools{display:none}
+body.sen-gameplay #arena>.arena-top{display:none}
+body:not(.booting) #arena.fullscreen-panels-open:has(.game-wrap.in-match)>#bench-bar:not(.hidden){display:flex;position:absolute;left:12px;right:12px;bottom:12px;max-height:40dvh;overflow:auto;z-index:30;background:#102034ed}
+body:not(.booting) #arena.fullscreen-panels-open:has(.game-wrap.in-match)>#training-tools:not(.hidden){display:flex;position:absolute;left:12px;right:12px;top:48px;max-height:30dvh;overflow:auto;z-index:30;background:#102034ed}
+#sen-court{position:absolute;inset:0;width:100%;height:100%;background:transparent;border:0;border-radius:0;pointer-events:none;z-index:20}
+#sen-court[hidden]{display:none!important}
+#sen-court .sen-court-top,#sen-court>.sen-note,#sen-game{display:none!important}
+#sen-court .sen-viewport{position:absolute;inset:0;pointer-events:none}
+#sen-court #sen-touch{position:absolute;inset:0;padding:0;background:transparent;pointer-events:none}
+#sen-touch .football-controls{position:absolute;inset:0}
+#sen-touch .football-stick,#sen-touch .football-actions button,#sen-touch .football-pause{pointer-events:auto}
+#sen-court .sen-court-toolbar{position:absolute;top:7px;right:8px;padding:0;z-index:5;pointer-events:auto;gap:6px}
+#sen-court .sen-court-toolbar button{min-height:36px;padding:7px 10px;background:#142c39d9;color:#fff;border:1px solid #7caa96;border-radius:7px;font-size:11px}
+#sen-tutorial-guide{position:absolute;top:118px;left:50%;transform:translateX(-50%);width:min(650px,92%);box-sizing:border-box;margin:0!important;padding:10px 14px;pointer-events:none;background:#10251fe8;border:1px solid #83aa6a;z-index:4}
+#sen-tutorial-guide p{font-size:13px;line-height:1.4}
+#sen-reconnect{position:absolute;top:125px;left:10%;right:10%;z-index:6;text-align:center;pointer-events:none}
+#network-pause{position:absolute;inset:0;z-index:50;display:grid;place-items:center;background:#07121e99;padding:16px}
+#network-pause[hidden]{display:none}
+#connection-quality{position:absolute;left:12px;top:6px;z-index:35;margin:0;padding:6px 9px;border-radius:6px;background:#102034df;color:#a6efcb;font-size:11px;pointer-events:none}
+#connection-quality[hidden]{display:none}
+#connection-quality[data-quality="ZAYIF"]{color:#ffb99a}
+#watch-bar{position:absolute;left:50%;top:7px;transform:translateX(-50%);z-index:90;display:flex;gap:12px;align-items:center;padding:6px 10px;background:#102034ef;border:1px solid #a6efcb;border-radius:8px;font-size:11px}
+#watch-bar[hidden]{display:none}
+body.spectating #paused,body.spectating #result,body.spectating #draw-choice,body.spectating #sen-touch,body.spectating .arena-top,body.spectating #room-chat,body.spectating #touch-controls{display:none!important}
+#watch-list button,#extras-open{margin:8px}
+@media(max-width:700px){#watch-bar{top:36px;width:max-content;max-width:calc(100% - 24px);font-size:10px;gap:6px}#connection-quality{font-size:10px;padding:5px 7px}}
+#network-pause .modal-card{max-width:min(470px,90vw);max-height:90%;overflow:auto}
+body.network-paused #paused{display:none!important}
+#arena #room-chat{right:12px;top:64px;bottom:auto;width:min(300px,calc(100% - 24px));z-index:70}
+#arena #chat-panel{max-height:calc(100dvh - 130px);overflow:auto}
+@media(max-width:700px){#arena #room-chat{top:48px;right:8px;width:min(270px,calc(100% - 16px))}#chat-toggle{padding:7px 12px}}
+@media(max-width:700px){#sen-tutorial-guide{top:70px;padding:7px 10px}#sen-tutorial-guide p{font-size:11px;margin:3px 0}#sen-tutorial-guide strong{font-size:12px}#sen-court .sen-court-toolbar button{font-size:9px;min-height:30px}#sen-reconnect{top:80px;left:4%;right:4%;font-size:12px}}

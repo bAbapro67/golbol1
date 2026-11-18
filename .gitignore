@@ -1,0 +1,13 @@
+artifacts/browser-profile/
+data/
+.env
+.env.*
+node_modules/
+.npm-cache/
+.electron-cache/
+desktop-stage/
+desktop-release/
+desktop-build-next/
+artifacts/desktop-*/
+
+.local-data/

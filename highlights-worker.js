@@ -1,0 +1,3 @@
+// Compress replay frames away from the game/render thread. One frame is in flight.
+let canvas,context;
+self.onmessage=async event=>{const {bitmap,settings}=event.data;try{if(!canvas){canvas=new OffscreenCanvas(settings.width,settings.height);context=canvas.getContext('2d',{alpha:false});}if(canvas.width!==settings.width||canvas.height!==settings.height){canvas.width=settings.width;canvas.height=settings.height;}context.drawImage(bitmap,0,0,settings.width,settings.height);const blob=await canvas.convertToBlob({type:'image/jpeg',quality:settings.quality});bitmap.close();self.postMessage({blob});}catch{bitmap?.close();self.postMessage({blob:null,failed:true});}};

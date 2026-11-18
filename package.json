@@ -1,0 +1,23 @@
+{
+  "name": "golbol",
+  "private": true,
+  "version": "1.8.0",
+  "productName": "Golbol",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "start": "node server.cjs",
+    "desktop": "node scripts/desktop.cjs",
+    "desktop:build": "node scripts/desktop.cjs build",
+    "desktop:share": "node scripts/package-share.cjs",
+    "web:build": "node scripts/build-web.mjs",
+    "release:build": "node scripts/build-releases.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "electron": "^45.0.0",
+    "node": "^24.22.1"
+  }
+}

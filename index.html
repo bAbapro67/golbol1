@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#0c111c">
+    <meta name="golbol-api-origin" content="">
+    <title>Golbol — Yıldızlar Ligi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portraits.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="ucl.css">
+    <link rel="stylesheet" href="ultimate.css">
+    <link rel="stylesheet" href="desktop-controls.css">
+    <link rel="stylesheet" href="draft-presentation.css">
+    <link rel="stylesheet" href="club-designer.css">
+    <link rel="stylesheet" href="presentation.css">
+    <link rel="stylesheet" href="fc27-cards.css">
+    <link rel="stylesheet" href="ultimate-team.css">
+    <link rel="stylesheet" href="party.css">
+<link rel="stylesheet" href="audio-settings.css"><link rel="stylesheet" href="account.css"><link rel="stylesheet" href="button-contrast.css"><link rel="stylesheet" href="startup.css"><link rel="stylesheet" href="mobile-controls.css"><link rel="stylesheet" href="daily.css">
+<link rel="stylesheet" href="language.css">
+    <link rel="stylesheet" href="community.css">
+<link rel="stylesheet" href="gameplay-view.css">
+</head>
+
+<body class="booting">
+<section id="opening" class="opening" aria-label="Oyuna giriş"><div id="opening-device"><h1>NEREDEN OYNUYORSUN?</h1><p>Kontrollerini senin için hazırlayalım.</p><div class="device-choices"><button data-opening-device="ps5">PS5 KONTROLCÜSÜ</button><button data-opening-device="pc">PC · KLAVYE</button><button data-opening-device="mobile">MOBİL · DOKUNMATİK</button></div></div><div id="opening-splash" hidden><img class="opening-logo" src="assets/fiction/golbol.svg" alt="Golbol"><button id="opening-start" class="opening-start">BAŞLA!</button></div></section>
+<section id="opening-loading" class="opening" hidden aria-label="Yükleniyor" aria-busy="false"><div><canvas id="loading-scene" class="loading-scene" width="900" height="380" aria-label="Mbappé şut çekip gol atıyor"></canvas><p class="loading-status" role="status">YÜKLENİYOR…</p></div></section>
+    <header class="site-header"><button class="brand" id="brand" aria-label="Ana menü"><span
+                class="brand-icon">✦</span><span>GOL<span class="accent">BOL</span><small>Y I L D I Z L A R L İ G
+                    İ</small></span></button>
+        <nav><button id="nav-home" class="nav-active">ANA MENÜ</button><button id="nav-club">ULTIMATE TEAM /
+                KULÜBÜM</button><button id="nav-how">OYUN BİLGİLERİ</button>
+        </nav>
+        <div class="header-tools"><span id="gamepad-status" role="status">PS5 kolunu bağla</span><span
+                class="edition">ARCADE /
+                VOL. 02</span><button id="sound" aria-label="Sesi kapat" aria-pressed="true">♪ <span>SES
+                    AÇIK</span></button></div>
+    </header>
+    <main>
+        <div class="section-line"><span><i></i> FUTBOLUN EN EĞLENCELİ HALİ</span><span>YENİ SEZON <b>2026</b></span>
+        </div>
+        <section class="arena" id="arena" aria-label="Futbol oyunu">
+            <div class="arena-top"><span id="venue-label"><i></i> STADYUM <small>EV SAHİBİNİN KALESİ</small></span>
+                <div><span id="match-label">YILDIZLAR LİGİ</span><button id="pause" title="Duraklat (Esc)"
+                        aria-label="Duraklat">Ⅱ</button><button id="fullscreen-panels" aria-expanded="false">MAÇ
+                        BİLGİLERİ</button><button id="fullscreen" title="Tam ekran" aria-label="Tam ekran">⛶</button>
+                </div>
+            </div>
+            <div class="game-wrap"><canvas id="game" width="1200" height="660" aria-label="Futbol sahası"></canvas>
+                <div class="overlay home-overlay" id="menu">
+                    <div class="hero-copy">
+                        <div class="tag">SENİN KULÜBÜN. SENİN HİKÂYEN.</div>
+                        <h1>SAHA<br><span>SENİN.</span></h1>
+                        <p>Kadronu kur. Renklerini tasarla. Efsaneni yaz.</p>
+                        <div class="home-mode-grid">
+                            <button id="play-menu" class="home-mode home-mode-match"><span class="mode-number">01 /
+                                    HAZIRLIK</span><b>MAÇA BAŞLA</b><small>Yıldızını seç, sahaya
+                                    çık</small><i>↗</i></button>
+                            <button id="offline-draft-open" class="home-mode home-mode-draft"><span
+                                    class="mode-number">02 / ULTIMATE</span><b>OFFLINE DRAFT</b><small>5 oyuncu + teknik
+                                    direktör · CPU</small><i>↗</i></button>
+                            <button id="online-open" class="home-mode home-mode-online"><span class="mode-number">03 /
+                                    ARKADAŞ ODASI</span><b>ONLINE OYNA</b><small>Özel oda · draft ·
+                                    sohbet</small><i>↗</i></button>
+                            <button id="club-open" class="home-mode home-mode-club"><span class="mode-number">04 /
+                                    ULTIMATE TEAM</span><b>ULTIMATE TEAM</b><small>Mağaza · Kulübüm · Maç
+                                    oyna</small><i>✦</i></button>
+                        </div>
+                        <div class="home-utilities"><button class="text-button" id="how-menu">PS5
+                                KONTROLLERİ</button><button class="text-button" id="desktop-settings-open" hidden>UYGULAMA
+                                AYARLARI</button><button type="button" class="text-button" id="desktop-test-open" hidden>2.
+                                OYUN PENCERESİ AÇ</button><button class="text-button" id="admin-open">ADMIN</button>
+                        </div>
+                    </div>
+                    <div class="hero-caption"><span>BENİM KULÜBÜM</span>
+                        <div class="home-club-identity"><img id="home-club-crest" alt="Kulübünün arması">
+                            <div><strong id="home-club-name"></strong><small id="home-club-short"></small></div>
+                        </div><small>Forma ve logo: Ultimate Team → Kulübüm.</small>
+                    </div>
+                    <div class="hero-sticker">GOLBOL <b>ULTIMATE</b><small>2026 / KİŞİSEL SÜRÜM</small></div>
+                </div>
+                <div class="overlay setup-overlay hidden" id="setup">
+                    <div class="setup-heading">
+                        <div><span class="tag">MAÇ HAZIRLIĞI</span>
+                            <h2>İKİ TAKIM. <em>SENİN SEÇİMİN.</em></h2>
+                        </div><button class="icon-button" id="back" aria-label="Ana menüye dön">✕</button>
+                    </div>
+                    <div class="setup-progress" aria-label="Sıralı maç hazırlığı">
+                        <div><span id="setup-step-count"></span><b id="setup-step-title"
+                                aria-live="polite"></b><small>PS5: Yön tuşları / sol analog · × Seç · ○ Geri</small>
+                        </div>
+                        <button id="setup-prev" class="text-button">ÖNCEKİ ADIM</button>
+                        <button id="setup-next" class="primary">ONAYLA VE DEVAM ET →</button>
+                    </div>
+                    <div class="competition-options"><label>ARENA <select id="competition">
+                                <option value="friendly">Hazırlık maçı</option>
+                                <option value="ucl">UCL · 16 takımlı turnuva</option>
+                                <option value="training">Antrenman arenası</option>
+                            </select></label><label>MAÇ SAATİ <select id="match-light">
+                                <option value="night">Gece · Projektörler</option>
+                                <option value="day">Gündüz · Güneşli</option>
+                            </select></label></div>
+                    <div class="setup-layout two-squads">
+                        <section class="squad-panel">
+                            <h3 class="squad-heading"><span>01</span> EV SAHİBİ TAKIMIN <small>TAKIMI VE OYUNCUYU
+                                    SEÇ</small></h3>
+                            <div class="team-carousel">
+                                <div class="country-tabs" id="countries-0" aria-label="Ev sahibi takımın ülkesi"></div>
+                                <button class="carousel-arrow prev" data-carousel="0" data-step="-1"
+                                    aria-label="Önceki takım">&#8249;</button>
+                                <div class="team-grid" id="teams-0" aria-label="Takımlar"></div><button
+                                    class="carousel-arrow next" data-carousel="0" data-step="1"
+                                    aria-label="Sonraki takım">&#8250;</button>
+                                <div class="carousel-counter" id="carousel-count-0" aria-live="polite"></div>
+                            </div>
+                            <div class="roster-heading">SAHAYA KİM ÇIKSIN? <span>□ ŞUT / ○ SÜPER</span></div>
+                            <div class="player-grid" id="roster-0"></div>
+                            <div class="reserve-pick" id="reserve-pick-0"></div>
+                            <div class="partner-pick" id="partner-pick-0"></div>
+                        </section>
+                        <section class="squad-panel opponent-panel">
+                            <h3 class="squad-heading"><span>02</span> RAKİBİN TAKIMI <small>RAKİBİ DE SEN
+                                    BELİRLE</small></h3>
+                            <div class="team-carousel">
+                                <div class="country-tabs" id="countries-1" aria-label="Rakip takımın ülkesi"></div>
+                                <button class="carousel-arrow prev" data-carousel="1" data-step="-1"
+                                    aria-label="Önceki takım">&#8249;</button>
+                                <div class="team-grid" id="teams-1" aria-label="Takımlar"></div><button
+                                    class="carousel-arrow next" data-carousel="1" data-step="1"
+                                    aria-label="Sonraki takım">&#8250;</button>
+                                <div class="carousel-counter" id="carousel-count-1" aria-live="polite"></div>
+                            </div>
+                            <div class="roster-heading">RAKİP OYUNCUYU SEÇ <span>□ ŞUT / ○ SÜPER</span></div>
+                            <div class="player-grid" id="roster-1"></div>
+                            <div class="reserve-pick" id="reserve-pick-1"></div>
+                            <div class="partner-pick" id="partner-pick-1"></div>
+                        </section>
+                    </div>
+                    <aside class="match-panel setup-bottom">
+                        <div><span class="mini-label">OYUN MODU</span>
+                            <div class="mode-select"><button data-mode="coop"><b>BİRLİKTE OYNA</b><small>P1 + P2 aynı
+                                        takım · 2v2</small></button><button class="selected" data-mode="ai"><b>TEK
+                                        OYUNCU</b><small>Bilgisayara meydan oku</small></button><button
+                                    data-mode="local"><b>İKİ OYUNCU</b><small>İki PS5 koluyla
+                                        derbi</small></button><button data-mode="ai-team"><b>CPU TAKIM
+                                        ARKADAŞI</b><small>Sen + CPU · 2v2</small></button></div>
+                        </div>
+                        <div id="training-super-choice" class="hidden">
+                            <label for="training-drawn-super">Çizgi ile süper şut olsun mu?</label>
+                            <select id="training-drawn-super">
+                                <option value="yes">Evet</option>
+                                <option value="no">Hayır</option>
+                            </select>
+                            <p>Özel takımın antrenman arenasında geçerlidir.</p>
+                        </div>
+                        <div class="versus-preview" id="versus"></div>
+                        <div class="start-panel"><button class="primary" id="start">SAHAYA ÇIK <span>➜</span></button>
+                            <p class="fiction-note">90 saniye · 117 kulüp · 351 yıldız<br>Her takımda üç oyuncu ve bir
+                                kaleci.</p>
+                        </div>
+                    </aside>
+                </div>
+                <div class="overlay ucl-screen hidden" id="bracket">
+                    <div class="ucl-toolbar">
+                        <h2 id="ucl-stage">UCL</h2><button id="ucl-next">MAÇA ÇIK</button><button id="ucl-home"
+                            class="text-button">ANA MENÜ</button>
+                    </div>
+                    <div id="ucl-tree"></div>
+                    <p class="ucl-note">16 kulüplü oyun turnuvası · İki oyuncu aynı takımda · Beraberlikte altın gol</p>
+                </div>
+                <div id="ceremony-controls" class="ceremony-controls hidden"><button id="ceremony-home">ŞAMPİYON! · ANA
+                        MENÜYE DÖN</button></div>
+                <div class="overlay modal-overlay hidden" id="draw-choice">
+                    <div class="modal-card draw-card"><span class="tag">NORMAL SÜRE BİTTİ</span>
+                        <h2>MAÇ BERABERE!</h2>
+                        <p id="draw-score" class="final-score"></p>
+                        <p>Maça nasıl devam edilsin?</p>
+                        <div class="draw-options">
+                            <button class="primary" id="end-draw">MAÇI BERABERE BİTİR</button>
+                            <button class="primary" id="extra-time">UZATMALARA GİT <small>30 saniye · Eşitlik sürerse
+                                    penaltılar</small></button>
+                            <button class="primary" id="start-shootout">PENALTILAR <small>5'er vuruş · Gerekirse tekli
+                                    eleme</small></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay modal-overlay hidden" id="result">
+                    <div class="modal-card"><span class="tag">SON DÜDÜK ÇALDI</span>
+                        <h2 id="result-title">GÜZEL MAÇ!</h2>
+                        <p id="result-score" class="final-score"></p>
+                        <p id="result-detail"></p>
+                        <button class="primary" id="again">RÖVANŞ
+                            <span>↗</span></button><button class="text-button" id="home">ANA MENÜYE DÖN</button>
+                    </div>
+                </div>
+                <div class="overlay modal-overlay hidden" id="paused">
+                    <div class="modal-card"><span class="tag">TAKTİK MOLASI</span>
+                        <h2>NEFES <em>AL.</em></h2>
+                        <p>Tribünler seni bekliyor.</p><button class="primary" id="resume">MAÇA DEVAM
+                            <span>➜</span></button><button class="text-button" id="pad-team-settings">TAKIM
+                            GÜÇLERİ</button><button class="text-button" id="pad-match-settings">MAÇ
+                            AYARI</button><button class="text-button" id="quit">ANA MENÜYE DÖN</button>
+                    </div>
+                </div>
+                <div class="overlay modal-overlay hidden" id="help">
+                    <div class="modal-card help-card"><span class="tag">OYUN PLANI</span>
+                        <h2>KONTROL <em>SENDE.</em></h2>
+                        <div class="help-players">
+                            <div>
+                                <h3>PS5 · MAÇ</h3>
+                                <p>Sol analog / ← → · Hareket</p>
+                                <p>↑ · Zıpla · ↓ / △ · Kay</p>
+                                <p>□ · Şut / çelme · × · Pas</p>
+                                <p>○ · Süper şut · R1 · Yedek</p>
+                                <p>Sağ analog · Penaltı hedefi / süper şut yolu</p>
+                                <p>Options · Duraklat · Dokunmatik yüzeye bas · Tam ekran</p>
+                            </div>
+                            <div>
+                                <h3>PS5 · TÜM MENÜLER</h3>
+                                <p>Sol analog / yön tuşları · Gezin</p>
+                                <p>× · Seç · ○ · Geri</p>
+                                <p>Seçenek kutularında ← → · Değeri değiştir</p>
+                                <p>Metin kutusunda × · Ekran klavyesi</p>
+                                <p>□ · Sil · △ · Boşluk</p>
+                                <p>İkinci PS5 kolu · Yerel iki oyunculu maç</p>
+                            </div>
+                        </div>
+                        <p class="help-tip">Top yokken rakibe dönüp yakından şut çek: rakip kısa süreli bayılır! Ayağa
+                            kalkınca kısa bir koruma kazanır. Süper şut 9 saniyede dolar.</p>
+                        <p class="help-tip">R1 değişiklik talebini sıraya alır; gol, penaltı veya kale vuruşunda
+                            uygulanır.
+                            Kale vuruşunda × ile pas ver. Antrenmanda arkadaşını CPU veya P2
+                            seçebilirsin.</p>
+                        <div id="game-details"></div><button class="primary" id="close-help">ANLADIM
+                            <span>✓</span></button>
+                    </div>
+                </div>
+            </div>
+            <div id="training-tools" class="training-tools hidden"><label>SAHA <select id="training-size">
+                        <option value="duo">İki saha oyuncusu</option>
+                        <option value="solo">Tek saha oyuncusu</option>
+                    </select></label><label>ÇALIŞMA <select id="training-drill">
+                        <option value="ground">Şut çalışması</option>
+                        <option value="header">Kafa vuruşu</option>
+                        <option value="bicycle">Röveşata</option>
+                        <option value="penalty">Penaltı</option>
+                    </select></label><button id="training-reset">TOPU HAZIRLA</button><span>PS5: Sol analog / □ / × / ○
+                    · Antrenmanda oyuncu değişikliği yok ·
+                    Tek kale · Sınırsız süre ve süper şut</span><label>ARKADAŞ <select id="training-partner">
+                        <option value="cpu">CPU · Otomatik oynar</option>
+                        <option value="human">P2 · İkinci PS5 kolu</option>
+                    </select></label></div>
+            <div id="restart-tools" class="restart-tools hidden" aria-live="polite"></div>
+            <div id="match-events" class="match-events hidden" aria-live="polite"></div>
+            <div id="bench-bar" class="bench-bar hidden">
+                <section class="bench-side">
+                    <div id="bench-info-0"></div><button id="sub-0"></button>
+                </section><span>PS5 · □ ŞUT / ○ SÜPER<br>Yüksek top: kafa · Kale önü: röveşata</span>
+                <section class="bench-side">
+                    <div id="bench-info-1"></div><button id="sub-1"></button>
+                </section>
+            </div>
+            <div class="arena-bottom"><span><b>⚡ YENİ HAREKET</b> Top yoksa yakınındaki rakibi şut hareketiyle
+                    sersemlet.</span><span>90 SANİYE <i>/</i> TEK KAZANAN</span></div>
+
+        </section>
+        <section class="features">
+            <article><span class="feature-icon">↗</span>
+                <div>
+                    <h3>ŞUTUNU KONUŞTUR</h3>
+                    <p>Geri çekil, vur, ağları sars. Her şutta yeni animasyon.</p>
+                </div><b>01</b>
+            </article>
+            <article><span class="feature-icon">✦</span>
+                <div>
+                    <h3>YILDIZLAR SAHADA</h3>
+                    <p>117 kulüp, 351 yıldız ve 117 kaleci. Senin takımın, senin oyun tarzın.</p>
+                </div><b>02</b>
+            </article>
+            <article><span class="feature-icon">ϟ</span>
+                <div>
+                    <h3>DERBİYE DAVET ET</h3>
+                    <p>Bilgisayara meydan oku veya arkadaşınla kapış.</p>
+                </div><b>03</b>
+            </article>
+        </section>
+        <footer><span>GOLBOL <b>© 2026</b></span><span>90 saniyede efsane ol.</span><span>KLAVYE +
+                DOKUNMATİK</span><a href="assets/audio/SOURCES.md" target="_blank">Tribün sesleri: ckater, paulw2k,
+                craigsmith · Freesound</a></footer>
+    </main>
+    <dialog id="online-dialog">
+        <form method="dialog" class="modal-card">
+            <h2>ÇEVRİMİÇİ MAÇ</h2>
+            <p>Oda kodunu arkadaşınla paylaş. PS5 kollarınızla oynayabilirsiniz.</p><label>MAÇ TÜRÜ <select
+                    id="online-mode">
+                    <option value="classic">Hazırlık maçı</option>
+                    <option value="draft">Online draft</option>
+                    <option value="ultimate">Ultimate Team · Kendi kadrom</option>
+                </select></label><button type="button" class="primary" id="online-create">ODA OLUŞTUR</button><label>ODA
+                KODU <input id="online-code" maxlength="6" autocomplete="off" placeholder="ABC123"></label><button
+                type="button" class="primary" id="online-join">ODAYA KATIL</button><button type="button" class="primary"
+                id="draft-begin">ULTIMATE DRAFT · ARKADAŞINLA</button>
+            <section id="online-ut-lobby" hidden>
+                <p id="online-ut-teams"></p><button type="button" id="online-ut-ready">KADROM HAZIR</button><button
+                    type="button" class="primary" id="online-ut-start" disabled>KULÜP MAÇINI BAŞLAT</button>
+            </section>
+            <p id="online-status" role="status" aria-live="polite"></p><button type="button" class="text-button"
+                id="online-leave">ODADAN AYRIL</button><button class="text-button">KAPAT</button>
+        </form>
+    </dialog>
+    <aside id="online-banner" class="hidden" role="status"
+        style="position:fixed;bottom:12px;left:12px;z-index:100;background:#101e37;padding:12px;border-radius:8px"><span
+            id="online-info"></span> <button id="online-room">ODA</button></aside>
+    <button id="admin-disable" class="hidden">ADMIN PANELİNİ KAPAT</button>
+    <dialog id="admin-dialog" aria-labelledby="admin-title">
+        <form id="admin-form">
+            <h2 id="admin-title">ADMIN PANELİ</h2>
+            <div id="admin-fields"></div>
+            <p id="admin-message" role="status"></p><button type="submit" class="primary">UYGULA</button>
+            <button type="button" id="admin-close" class="text-button">KAPAT</button>
+        </form>
+    </dialog>
+    <script src="moderation-data.js"></script>
+    <script src="moderation-core.js"></script>
+    <script src="moderation-ui.js"></script>
+    <script src="community-core.js"></script>
+    <script src="api-client.js"></script>
+    <script src="roster.js"></script>
+    <script src="expansion.js"></script>
+    <script src="club-portraits.js"></script>
+    <script src="europe.js"></script>
+    <script src="coaches.js"></script>
+    <script src="europe-clubs.js"></script>
+    <script src="special-teams.js"></script>
+    <script src="render-cache.js"></script>
+    <script src="match-world.js"></script>
+    <script src="playstyles.js"></script>
+    <script src="kits.js"></script>
+    <script src="turkish-kits.js"></script>
+    <script src="european-kits.js"></script>
+    <script src="english-kits.js"></script>
+    <script src="continental-kits.js"></script>
+    <script src="spanish-kits.js"></script>
+    <script src="team-performance.js"></script>
+    <script src="fc27-card-data.js"></script>
+    <script src="fc27-catalog.js"></script>
+    <script src="fc27-install.js"></script>
+    <script src="overall.js"></script>
+    <script src="audio-settings.js"></script>
+    <script src="crowd.js"></script>
+    <script src="ucl.js"></script>
+    <script src="club-designer.js"></script>
+    <script src="club-designer-ui.js"></script>
+    <script src="presentation-art.js"></script>
+    <script src="draft-cards.js"></script>
+    <script src="controller.js"></script>
+    <script src="keeper-balance.js"></script>
+    <script src="fictional-identities.js"></script>
+    <script src="match-insights.js"></script>
+    <script src="game.js"></script>
+    <script src="online.js"></script>
+    <script src="draft-face-data.js"></script>
+    <script src="draft-portrait-source.js"></script>
+    <script src="draft-portrait-data.js"></script>
+    <script src="draft-portrait.js"></script>
+    <script src="draft-ui.js"></script>
+    <script src="ultimate.js"></script>
+    <script src="presentation.js"></script>
+    <script src="ultimate-team-core.js"></script>
+    <script src="ultimate-team.js"></script>
+    <script src="account.js"></script>
+    <script src="ultimate-trade-ui.js"></script>
+    <script src="local-play.js"></script>
+    <script src="party-lobby.js"></script>
+    <script src="room-chat.js"></script>
+    <script src="network-match-ui.js"></script>
+    <script src="desktop-ui.js"></script>
+<script src="mobile-controls.js"></script>
+<script src="startup.js"></script>
+    <link rel="stylesheet" href="sen.css">
+    <script src="sen-core.js"></script>
+    <script src="sen-player.js"></script>
+    <script src="sen-head-data.js"></script>
+    <script src="sen-appearance.js"></script>
+    <script src="sen.js"></script>
+<script src="daily-ui.js"></script>
+<script src="community-ui.js"></script>
+<script src="social-play.js"></script>
+<script src="social-ui.js"></script>
+<script src="play-plus.js"></script>
+<script src="match-extras.js"></script>
+    <script src="highlights-core.js"></script>
+    <script src="highlights-store.js"></script>
+    <script src="highlights.js"></script>
+    <script src="language-data.js"></script>
+<script src="language-more.js"></script>
+<script src="language-core.js"></script>
+<script src="language.js"></script>
+</body>
+
+</html>

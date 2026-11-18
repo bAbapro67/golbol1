@@ -1,0 +1,349 @@
+.portrait {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background-image: url('assets/player-heads.png');
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 3px 3px #0005)
+}
+
+.setup-layout.two-squads {
+    grid-template-columns: 1fr 1fr;
+    gap: 26px
+}
+
+.squad-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--lime);
+    margin: 0 0 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d9ff6655
+}
+
+.squad-heading>span {
+    font-size: 17px
+}
+
+.squad-heading small {
+    margin-left: auto;
+    font-size: 7px;
+    color: #8298b2;
+    letter-spacing: .4px
+}
+
+.opponent-panel .squad-heading {
+    color: #8dceff;
+    border-color: #8dceff55
+}
+
+.opponent-panel .selected {
+    border-color: #8dceff
+}
+
+.opponent-panel .team-card.selected:after {
+    color: #8dceff
+}
+
+.setup-bottom.match-panel {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr 1fr;
+    gap: 20px;
+    align-items: center;
+    border-left: 0;
+    border-top: 1px solid #ffffff18;
+    padding: 17px 0 0;
+    margin-top: 22px
+}
+
+.setup-bottom .versus-preview {
+    margin: 0
+}
+
+.setup-bottom .primary {
+    margin-top: 0
+}
+
+.setup-bottom .mode-select {
+    margin: 10px 0 0
+}
+
+.setup-bottom .fiction-note {
+    font-size: 7px
+}
+
+.setup-bottom .versus-preview .portrait {
+    width: 35px;
+    height: 39px
+}
+
+.setup-bottom .versus-preview>div {
+    gap: 4px
+}
+
+.setup-bottom .versus-preview b {
+    font-size: 7px
+}
+
+.setup-bottom .versus-preview small {
+    font-size: 7px
+}
+
+.setup-bottom .start-panel {
+    min-width: 0
+}
+
+@media(max-width:1100px) {
+    .squad-heading {
+        font-size: 9px
+    }
+
+    .squad-heading small {
+        display: none
+    }
+
+    .setup-layout.two-squads {
+        gap: 17px
+    }
+
+    .two-squads .team-card {
+        min-height: 64px
+    }
+
+    .setup-bottom.match-panel {
+        gap: 14px;
+        margin-top: 17px;
+        padding-top: 13px
+    }
+
+    .setup-bottom .mode-select b {
+        font-size: 8px
+    }
+
+    .setup-bottom .mode-select small {
+        font-size: 6px
+    }
+}
+
+@media(max-width:800px) {
+    .setup-bottom.match-panel {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .setup-bottom .versus-preview {
+        display: none
+    }
+
+    .setup-bottom .mode-select {
+        flex-direction: row
+    }
+
+    .two-squads .team-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .setup-overlay {
+        overscroll-behavior: contain
+    }
+
+    .setup-bottom.match-panel {
+        position: sticky;
+        bottom: -20px;
+        background: #101e2ef5;
+        padding: 13px 0;
+        z-index: 2;
+        box-shadow: 0 -10px 20px #101e2ef0
+    }
+
+    .setup-bottom .fiction-note {
+        display: none
+    }
+
+    .setup-heading h2 {
+        font-size: 23px
+    }
+
+    .two-squads .player-grid {
+        grid-template-columns: 1fr
+    }
+
+    .two-squads .player-card {
+        min-height: 60px
+    }
+
+    .two-squads .team-card b {
+        font-size: 7px
+    }
+}
+
+@media(max-width:540px) {
+    .setup-layout.two-squads {
+        grid-template-columns: 1fr;
+        gap: 22px
+    }
+
+    .two-squads .team-grid {
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .two-squads .player-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .squad-heading {
+        font-size: 10px
+    }
+
+    .squad-heading small {
+        display: block;
+        font-size: 6px
+    }
+
+    .setup-bottom.match-panel {
+        bottom: -17px;
+        margin-top: 15px;
+        gap: 10px
+    }
+
+    .setup-bottom .mode-select button {
+        padding: 9px 5px
+    }
+
+    .setup-bottom .mode-select small {
+        display: none
+    }
+
+    .setup-bottom .mode-select b {
+        font-size: 7px
+    }
+
+    .setup-bottom .primary {
+        font-size: 9px;
+        padding: 14px 10px
+    }
+
+    .setup-bottom .mini-label {
+        font-size: 7px
+    }
+
+    .setup-overlay {
+        padding-bottom: 17px
+    }
+
+    .setup-heading h2 {
+        font-size: 25px;
+        max-width: 245px
+    }
+}
+
+.player-card {
+    gap: 8px;
+    padding: 8px;
+    min-height: 74px
+}
+
+.player-card .portrait {
+    width: 49px;
+    height: 56px
+}
+
+.player-card b {
+    font-size: 10px
+}
+
+.player-card small {
+    font-size: 7px
+}
+
+.versus-preview .portrait {
+    width: 60px;
+    height: 65px
+}
+
+.versus-preview {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.setup-heading .tag:after {
+    content: ' / 2026–27';
+    color: #8398b1
+}
+
+.fiction-note {
+    line-height: 1.6
+}
+
+@media(max-width:1100px) {
+    .player-card .portrait {
+        width: 37px;
+        height: 44px
+    }
+
+    .player-card b {
+        font-size: 9px
+    }
+
+    .player-card small {
+        font-size: 6px
+    }
+
+    .versus-preview .portrait {
+        width: 47px;
+        height: 52px
+    }
+}
+
+@media(max-width:800px) {
+    .player-card {
+        padding: 5px;
+        gap: 4px
+    }
+
+    .player-card .portrait {
+        width: 30px;
+        height: 37px
+    }
+
+    .player-card b {
+        font-size: 8px
+    }
+
+    .player-card small {
+        font-size: 6px
+    }
+}
+
+@media(max-width:540px) {
+    .player-card .portrait {
+        width: 42px;
+        height: 48px
+    }
+
+    .player-card b {
+        font-size: 10px
+    }
+
+    .player-card small {
+        font-size: 7px
+    }
+
+    .versus-preview .portrait {
+        width: 38px;
+        height: 44px
+    }
+}
+
+.portrait.round-portrait,
+.coach-head.round-portrait {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 48px;
+    height: 48px;
+    background-color: transparent
+}
