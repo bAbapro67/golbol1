@@ -1,0 +1,8 @@
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.ArenaSocialPlay=factory();})(typeof window==='object'?window:globalThis,()=>{
+ 'use strict';
+ function fixtures(players,id){const ring=[...players],rounds=[];if(ring.length%2)ring.push(null);for(let r=0;r<ring.length-1;r++){const matches=[];for(let i=0;i<ring.length/2;i++){const a=ring[i],b=ring[ring.length-1-i];if(a&&b)matches.push({id:id+':'+r+':'+i,players:r%2?[b,a]:[a,b],score:null,winner:null});}rounds.push(matches);ring.splice(1,0,ring.pop());}return rounds;}
+ function table(league){const rows=new Map(league.players.map(key=>[key,{key,played:0,wins:0,losses:0,goals:0,conceded:0,points:0}]));for(const match of league.rounds.flat()){if(!match.score)continue;match.players.forEach((key,i)=>{const row=rows.get(key);row.played++;row.goals+=match.score[i];row.conceded+=match.score[1-i];if(match.winner===key){row.wins++;row.points+=3;}else row.losses++;});}return [...rows.values()].sort((a,b)=>b.points-a.points||(b.goals-b.conceded)-(a.goals-a.conceded)||b.goals-a.goals||a.key.localeCompare(b.key));}
+ function settle(league,id,winner,score){const match=league.rounds.flat().find(m=>m.id===id);if(!match||match.score||!match.players.includes(winner))return false;match.winner=winner;match.score=score.map(n=>Math.max(0,Math.floor(n)));league.finished=league.rounds.flat().every(m=>m.score);return true;}
+ function series(room,winner){if(!room.series)return null;room.series.wins[winner]++;room.series.played++;if(room.series.wins[winner]>=2)room.series.winner=winner;return room.series;}
+ return {fixtures,table,settle,series};
+});
